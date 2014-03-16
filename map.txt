@@ -1,0 +1,18 @@
+dimensione totale rete(row,col): 5 5
+number of subnets: 4
+subnet 0 dimension(row,col): 2 2
+subnet 0 position(row,col): 0 0
+subnet 0 clock period(SC_NS): 2
+subnet 0 N: 2
+subnet 1 dimension(row,col): 3 3
+subnet 1 position(row,col): 0 2
+subnet 1 clock period(SC_NS): 3
+subnet 1 N: 3
+subnet 2 dimension(row,col): 3 2
+subnet 2 position(row,col): 2 0
+subnet 2 clock period(SC_NS): 5
+subnet 2 N: 5
+subnet 3 dimension(row,col): 2 3
+subnet 3 position(row,col): 3 2
+subnet 3 clock period(SC_NS): 4
+subnet 3 N: 4
