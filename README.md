@@ -58,3 +58,42 @@ Follow the models included in the sw. There is not control on the correctness of
     22333
     55544
     55544
+
+OUTPUT FILES: 
+
+* example.txt: main output file, describing time step by time step how each switch looks like (which packets are in, which packets are out)
+  Used to check traffic in the network with low level details!
+
+* fifo.txt: describes time step by time step how each fifo looks like (which packets are in, which packets are out)
+
+* tx_file.txt: file showing how to debug / analyze GRLS wrapper
+
+* wave.vcd, wave2.vcd: visualize how packets go through the GRLS wrapper 
+    
+HOW TO COMPILE
+
+* run the makefile. If SystemC is not in the path of your shell, you can add it 
+  or modify the makefile following the instruction provided in the "Makefile" file.
+  
+HOW TO RUN 
+
+* as it is today, a successful compilation generates an executable named "run.x" 
+  Running the executable without any flag (./run.x) is enough to run the simulation. 
+  
+* as it is today, input files are "hardcoded" in the C code. Future work is to pass them 
+  as parameters, eventually setting flags to decide what to generate (between the output files) 
+  so that the simulation time can be reduced. 
+  
+COMPARISON WITH SIMILAR PROJECTS:
+
+The most similar project is the Semla simulator: http://www.ict.kth.se/nostrum/NNSE/
+
+Semla additional features: 
+  * permits to model an application (transport layer), not only packets!
+  * more abstract model of the NoC-based system (divided in layers), simulator optimized for speed.
+  * check their routing algorithm, if it is exactly the same!
+  
+Our additional features:
+  * GRLS supprt
+  * it is a lower abstraction level (network layer) but higher details (which details on each packet, where it is located in a specific time slot)
+
